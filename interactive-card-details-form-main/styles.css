@@ -1,0 +1,467 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Josefin+Sans:wght@200&family=Libre+Franklin:wght@200;400&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:wght@100;200;400;600;700;800;900&family=Roboto:wght@300;400;500&family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Space Grotesk';
+    
+}
+
+main {
+    width: 100vw;
+    max-width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+
+.attribution {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+.blue-part {
+    height: auto;
+    padding-bottom: 30px;
+    background-image: url('./images/bg-main-mobile.png');
+    width: 120%;
+    /* min-width: 20rem; */
+    background-size: cover;
+}
+
+.cards {
+    /* width: 100%; */
+    margin-bottom: -80px;
+}
+
+.back-card {
+    position: relative;
+    max-width: 400px;
+    top: 30px;
+    left: 80px;
+}
+
+
+.back-card #cvc {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: -4px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10rem;
+}
+
+
+#back-card-img {
+    width: 70%;
+}
+
+
+.front-card {
+    position: relative;
+    max-width: 400px;
+    margin-top: -40px;
+    margin-left: 20px;
+
+}
+
+#front-card-img {
+    width: 70%;
+}
+
+.card-logo {
+    position: absolute;
+    top: 0.5rem;
+    left: -1rem;
+    transform: scale(.7);
+    padding-right: 10rem;
+}
+
+#card-logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    padding-right: 10rem;
+}
+
+.card-number {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    letter-spacing: 2px;
+    top: 5rem;
+    left: 1.2rem;
+    padding-right: 10rem;
+    white-space: nowrap;
+}
+
+.name-date {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    justify-content: space-between;
+    left: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    top: 7rem;
+    font-size: 10px;
+}
+
+/* end of blue part styling */
+/* .start-part {
+    display: none;
+} */
+.white-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    min-width: 10rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+form {
+    width: 18rem;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.form-name{
+    display: flex;
+    flex-direction: column;
+}
+
+#fname {
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: 1px solid rgb(212, 207, 207);
+}
+
+input[type='text']::placeholder {
+    color: rgb(212, 207, 207);
+}
+
+#fname:focus {
+    outline: none;
+} 
+
+.form-card-number {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#fcardNumber {
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: 1px solid rgb(212, 207, 207);
+    padding-left:10px;
+}
+
+#fcardNumber:focus {
+    outline: none;
+} 
+
+
+#fcardNumber::placeholder {
+    color: rgb(212, 207, 207);
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding-left: 10px;
+}
+
+#error-card {
+    margin-top: 5px;
+    margin-left: 5px;
+    display: none;
+    color: red;
+    font-size: 0.6rem;
+}
+
+.exp-cvc-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.exp-date {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.exp-MY {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+#expDateM {
+    /* display: inline; */
+    padding:  8px 4px;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: 1px solid rgb(212, 207, 207);
+    width: 4.8rem;
+}
+#expDateY {
+    /* display: inline; */
+    padding:  8px 4px;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: 1px solid rgb(212, 207, 207);
+    width: 4rem;
+    margin-right: 20px;
+}
+
+#expDateM:focus{
+    outline: none;
+}
+
+#expDateY:focus{
+    outline: none;
+}
+
+#error-date {
+    margin-top: 5px;
+    margin-left: 5px;
+    display: none;
+    color: red;
+    font-size: 0.6rem;
+}
+.cvc-part {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='number']{
+    padding: 8px 4px;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: 1px solid rgb(212, 207, 207);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* #cvcNum{
+    padding:  10px 4px;
+    border-radius: 10px;
+        border: 1px solid rgb(212, 207, 207);
+} */
+
+#cvcNum:focus {
+    outline: none;
+} 
+
+#error-cvc {
+    margin-top: 5px;
+    margin-left: 5px;
+    display: none;
+    color: red;
+    font-size: 0.6rem;
+}
+
+.button-confirm {
+    display: flex;
+}
+
+#btn {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(39, 33, 58);
+    color: #fff;
+    font-family: 'Space Grotesk';
+    text-transform: capitalize;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: rgb(83, 70, 125); 
+    transform: skew(10deg);
+}
+
+/* thank you part  */
+.thank-part {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    font-style: normal;
+}
+
+
+#complete {
+    width: 4rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1.3;
+    letter-spacing: 3px;
+}
+
+#success-message {
+    margin-top: 1rem;
+    color: grey;
+}
+
+#continue-btn{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(39, 33, 58);
+    color: #fff;
+    font-family: 'Space Grotesk';
+    text-transform: capitalize;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#continue-btn:hover {
+    background-color: rgb(83, 70, 125); 
+    transform: skew(10deg);
+}
+
+/* desktop design */
+@media screen and (min-width: 960px) {
+    
+    body {
+        width: 100%;
+        max-width: 2000px;
+    }
+
+    main {
+        width: 100vw;
+        height: 100vh;
+        max-width: 2000px;
+        flex-direction: row;
+    }
+
+   .blue-part {
+    height: 100vh;
+    width: 30rem;
+    margin-right: 13rem;
+    }
+
+    .cards {
+        max-width: 20%;
+        position: relative;
+        margin-left: 15rem;
+        transform: scaleY(-1);
+        margin-top: 200px;
+    }
+
+
+    .front-card {
+        position: relative;
+        transform: scaleY(-1);
+        margin-top: 3rem;
+    }
+
+    #front-card-img {
+        width: 21rem;
+    }
+
+    .card-number {
+        letter-spacing: 0.1rem;
+        top: 5.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .name-date {
+        width: 18rem;
+        justify-content: space-between;
+        left: 1rem;
+        top: 9rem;
+       
+    }
+
+    .back-card {
+        transform: scaleY(-1);
+    }
+    #back-card-img {
+        width: 21rem;
+    }
+
+    .back-card #cvc {
+        font-size: 1rem;
+        top: -4px;
+        padding-right: 7rem;
+        padding-left: 17rem;
+    }
+
+    /* end of blue part styling */
+    .white-part {
+        margin-right: 20rem;
+    }
+
+}
+
+
+/* little phone design */
+/* @media screen and (max-width: 300px) {
+    .back-card #cvc {
+        padding-right: 10rem;
+        padding-left: 14rem;
+    }
+
+    #card-logo {
+        transform: scale(.7);
+        left: -1rem;
+    }
+    
+    .card-number {
+        left: 1rem;
+        font-size: 11px;
+        letter-spacing: 0.1rem;
+        top: 5rem;
+        font-size: 1rem;
+    }
+
+    .name-date {
+        font-size: 7px;
+        top: 7rem;
+    }
+} */
